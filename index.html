@@ -10,7 +10,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <script type="text/javascript" src="/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/3f3417947e.js" crossorigin="anonymous"></script>
     <title>Portfólio</title>
 </head>
@@ -28,18 +27,9 @@
     }
 </style>
 
+  
 <body>
-
-    <!-- início do preloader -->
-  <div id="preloader">
-    <div class="inner">
-       <div class="caminhar">
-          <img src="imagens/preloader.gif">                  
-       </div>
-    </div>
-</div>
-<!-- fim do preloader --> 
-
+    
     <div class="container">
 
         <div class="hamburguer">
@@ -51,6 +41,7 @@
         <header id="home">
             <div class="img-wrapper">
                 <img src="imagens/bg.jpg" alt="Computador">
+
             </div>
             <div class="banner">
                 <h1>Web Developer & Java Full Stack</h1>
@@ -290,18 +281,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="js/preloader.js"></script>
-
-    //
-    <![CDATA[
-        $(Window).on('load', function () {
-        $('#preloader .inner').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body).delay(350).css({'overflow': 'visible'});
-        })
-        //]]>
-
-    </script>
+    
 
 </body>
 
