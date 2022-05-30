@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script type="text/javascript" src="/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/3f3417947e.js" crossorigin="anonymous"></script>
     <title>Portfólio</title>
 </head>
@@ -28,6 +29,16 @@
 </style>
 
 <body>
+
+    <!-- início do preloader -->
+  <div id="preloader">
+    <div class="inner">
+       <div class="caminhar">
+          <img src="imagens/preloader.gif">                  
+       </div>
+    </div>
+</div>
+<!-- fim do preloader --> 
 
     <div class="container">
 
@@ -165,8 +176,8 @@
                         <h2>Redes</h2>
                         <h3>Arrumando</h3>
                         <p>edeeededededededededede ededededededed ededededededed
-                        ededededede ededededede dededededee dededededee
-                        dededede ededededed deded</p>
+                            ededededede ededededede dededededee dededededee
+                            dededede ededededed deded</p>
                         <button class="btn">Saiba Mais</button>
                     </div>
                 </div>
@@ -179,12 +190,12 @@
                         <h2>Redes</h2>
                         <h3>Arrumando</h3>
                         <p>edeeededededededededede ededededededed ededededededed
-                        ededededede ededededede dededededee dededededee
-                        dededede ededededed deded</p>
+                            ededededede ededededede dededededee dededededee
+                            dededede ededededed deded</p>
                         <button class="btn">Saiba Mais</button>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="imagens/pro3.jpg" alt="imagem do projeto Jupyter" />
@@ -193,12 +204,12 @@
                         <h2>Redes</h2>
                         <h3>Arrumando</h3>
                         <p>edeeededededededededede ededededededed ededededededed
-                        ededededede ededededede dededededee dededededee
-                        dededede ededededed deded</p>
+                            ededededede ededededede dededededee dededededee
+                            dededede ededededed deded</p>
                         <button class="btn">Saiba Mais</button>
                     </div>
                 </div>
-            </div>  
+            </div>
 
         </section>
         <br>
@@ -213,17 +224,17 @@
                             <input type="text" class="field" id="nome">
                             <label class="field-label">Nome</lable>
                         </div>
-                        
+
                         <div class="input-group">
                             <input type="text" class="field" id="email">
                             <label class="field-label">E-mail</lable>
                         </div>
-                        
+
                         <div class="input-group">
                             <textarea class="field" id="mensagem"></textarea>
                             <label for="mensagem" class="field-label">Mensagem</lable>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-submit">Enviar</button>
                     </form>
                 </div>
@@ -249,12 +260,12 @@
                         <div>
                             <input type="radio" name="layout" id="layout-sin">
                             <label for="layout-nao">Já tenho um layout</label>
-                            </div>
+                        </div>
                     </div>
-                        <label for="prazo">Prazo</label>
-                        <input type="range" name="prazo" id="prazo">
-                        <br>
-                        <button class="btn btn-orcamento" type="submit">Enviar</button>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo">
+                    <br>
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
                 </form>
             </div>
         </section>
@@ -262,7 +273,7 @@
         <footer>
             <div class="footer-content">
                 <p>
-                    Copyright &copy; 2022, Luis Gabriel S. P - Todos os direitos reservados 
+                    Copyright &copy; 2022, Luis Gabriel S. P - Todos os direitos reservados
                 </p>
                 <div class="social-list">
                     <ul>
@@ -278,8 +289,20 @@
         </a>
     </div>
 
-</body>
+    <script src="script.js"></script>
+    <script src="js/preloader.js"></script>
 
-<script src="script.js"></script>
+    //
+    <![CDATA[
+        $(Window).on('load', function () {
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+        $('body).delay(350).css({'overflow': 'visible'});
+        })
+        //]]>
+
+    </script>
+
+</body>
 
 </html>
