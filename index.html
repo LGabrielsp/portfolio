@@ -12,24 +12,33 @@
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/3f3417947e.js" crossorigin="anonymous"></script>
     <title>Portfólio</title>
+
 </head>
 
 <style>
+
+    /*Ajustar o conteúdo para Smartphones*/
+    @media screen and (max-width:480px){
+        body{
+            max-width: 480px;
+            font-size: 1.0em;
+        }
+    }
+
     ul {
         list-style: none;
         padding-left: 0;
     }
-</style>
-
-<style>
     a {
         text-decoration: none;
     }
 </style>
 
-  
+
 <body>
-    
+
+    <main>
+
     <div class="container">
 
         <div class="hamburguer">
@@ -54,8 +63,8 @@
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="#projetos" class="menu-link">Projeto</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
                     <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
                     <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
                 </ul>
@@ -149,11 +158,10 @@
 
                 <div class="conhecimentos-img-wrapper">
                     <img src="imagens/conhecimento.png" alt="imagem conhecimentos" srcset="">
-
                 </div>
             </div>
         </section>
-
+        <br>
         <section class="sessao-projetos" id="projetos">
             <div class="sessao-header">
                 <h1>Projetos</h1>
@@ -239,23 +247,24 @@
                 <form>
                     <label for="qtde">Quantidade de Páginas</label>
                     <input type="number" min="1" name="qtde" id="qtde">
-                    <label for="js">Preciso de um script js</label>
+                    <label for="js">Preciso de um script JS</label>
                     <input type="checkbox" name="js" id="js">
                     <label>Layout</label>
                     <div class="group-layout">
                         <div>
-                            <input type="radio" name="layout" id="layout-sin">
+                            <input type="radio" name="layout" id="layout-sim">
                             <label for="layout-sim">Preciso de um layout</label>
                         </div>
                         <br>
                         <div>
-                            <input type="radio" name="layout" id="layout-sin">
+                            <input type="radio" name="layout" id="layout-nao">
                             <label for="layout-nao">Já tenho um layout</label>
                         </div>
                     </div>
-                    <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo">
+                    <label for="prazo">Prazo:</label>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
                     <br>
+                    <label id="preco">R$0,00</label>
                     <button class="btn btn-orcamento" type="submit">Enviar</button>
                 </form>
             </div>
@@ -281,8 +290,8 @@
     </div>
 
     <script src="script.js"></script>
-    
 
+</main>
 </body>
 
 </html>
